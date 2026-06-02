@@ -32,7 +32,7 @@ body {
         .header {
             background-color: var(--forest-green); /* Ensure a solid background for the header */
             padding: 30px 0;
-            position: absolute; /* Make header absolute */
+            position: fixed; /* Changed to fixed */
             width: 100%;
             top: 0;
             z-index: 4000;
@@ -78,7 +78,7 @@ body {
             letter-spacing: 1px;
         }
 
-.hero {
+        .hero {
             position: relative;
             min-height: 100vh; /* Revert min-height to full viewport height */
             display: flex;
@@ -89,7 +89,8 @@ body {
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
-            padding-top: 150px; /* Add padding-top to hero to account for absolute header */
+            padding-top: 200px; /* Increased padding-top to account for fixed header */
+            margin-top: 100px; /* Add margin-top to push content below fixed header */
         }
 
         .hero::before {
@@ -255,7 +256,7 @@ h1 {
         .offer-section {
             position: relative;
             padding: 180px 0;
-            background-image: url('treeBackgroun.png');
+            background-image: url('treeBackground.png');
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
