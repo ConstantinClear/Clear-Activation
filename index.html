@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLEAR Activation - The Immersive Transmission</title>
+    <title>Clear the Way for What's Next: A Live CLEAR Experience</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -19,9 +19,9 @@
 
         * { box-sizing: border-box; }
 
-body {
+        body {
             margin: 0;
-            padding: 0; /* Remove padding-top from body */
+            padding: 0;
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--off-white);
@@ -30,9 +30,9 @@ body {
         }
 
         .header {
-            background-color: var(--forest-green); /* Ensure a solid background for the header */
+            background-color: var(--forest-green);
             padding: 30px 0;
-            position: fixed; /* Changed to fixed */
+            position: fixed;
             width: 100%;
             top: 0;
             z-index: 4000;
@@ -60,8 +60,8 @@ body {
             align-items: center;
         }
 
-        .logo img { 
-            height: clamp(80px, 12vw, 130px); 
+        .logo img {
+            height: clamp(80px, 12vw, 130px);
             width: auto;
             cursor: pointer;
         }
@@ -76,11 +76,13 @@ body {
             text-transform: uppercase;
             font-size: 1rem;
             letter-spacing: 1px;
+            transition: all 0.3s ease;
         }
+        .header-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,193,7,0.4); }
 
         .hero {
             position: relative;
-            min-height: 100vh; /* Revert min-height to full viewport height */
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -89,8 +91,8 @@ body {
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
-            padding-top: 200px; /* Increased padding-top to account for fixed header */
-            margin-top: 100px; /* Add margin-top to push content below fixed header */
+            padding-top: 200px;
+            margin-top: 100px;
         }
 
         .hero::before {
@@ -110,10 +112,10 @@ body {
 
         .hero-content { position: relative; z-index: 10; max-width: 1200px; padding: 20px; }
 
-h1 {
+        h1 {
             font-size: clamp(2.5rem, 8vw, 6rem);
             color: var(--gold);
-            margin: 0 0 20px; /* Revert h1 margin to original */
+            margin: 0 0 20px;
             font-weight: 900;
             line-height: 1.05;
         }
@@ -209,18 +211,8 @@ h1 {
             width: 100%;
         }
         .guide-img img { width: 100%; display: block; object-fit: cover; aspect-ratio: 1/1; }
-        .guide-text h3 {
-            color: var(--gold);
-            font-size: 2rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 900;
-        }
-        .guide-text p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            opacity: 0.9;
-        }
+        .guide-text h3 { color: var(--gold); font-size: 2rem; margin-top: 0; margin-bottom: 15px; font-weight: 900; }
+        .guide-text p { font-size: 1.2rem; line-height: 1.7; opacity: 0.9; }
 
         .foundation-grid {
             display: grid;
@@ -296,82 +288,185 @@ h1 {
             color: var(--gold);
             background: rgba(197, 168, 124, 0.05);
         }
-        .method-content h3 {
-            color: var(--gold);
-            font-size: 2rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 900;
+        .method-content h3 { color: var(--gold); font-size: 2rem; margin-top: 0; margin-bottom: 15px; font-weight: 900; }
+        .method-content p { font-size: 1.2rem; line-height: 1.7; opacity: 0.9; }
+
+        /* Proof section */
+        .proof-section {
+            position: relative;
+            padding: 120px 0;
+            background-image: url('gateway.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
         }
-        .method-content p {
-            font-size: 1.2rem;
+        .proof-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(19, 34, 24, 0.94);
+        }
+        .proof-content { position: relative; z-index: 10; }
+        .quote-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .quote-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 40px 35px;
+            backdrop-filter: blur(15px);
+            transition: all 0.4s ease;
+        }
+        .quote-card:hover { border-color: var(--gold); }
+        .quote-card p { font-size: 1.3rem; font-style: italic; line-height: 1.7; opacity: 0.95; margin: 0 0 15px; }
+        .quote-card .attribution { color: var(--gold); font-size: 1rem; font-weight: 700; font-style: normal; letter-spacing: 1px; }
+        .use-case-block {
+            background: var(--glass);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 20px 20px 0;
+            padding: 35px 40px;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Vow and commitment */
+        .vow-section { padding: 120px 0; background-color: var(--deep-field); text-align: center; }
+        .vow-block {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--glass);
+            border: 1px solid var(--gold);
+            border-radius: 40px;
+            padding: 70px 80px;
+            backdrop-filter: blur(20px);
+        }
+        .vow-block h2 { color: var(--gold); font-size: 3rem; font-weight: 900; margin-bottom: 30px; }
+        .vow-block p { font-size: 1.5rem; line-height: 1.9; opacity: 0.95; }
+
+        /* Order form section */
+        .order-section {
+            position: relative;
+            padding: 180px 0;
+            background-image: url('horizon.webp');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
+        .order-section::before { content: ''; position: absolute; inset: 0; background: rgba(19, 34, 24, 0.93); }
+        .order-content { position: relative; z-index: 10; }
+        .order-box {
+            background: var(--glass);
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            padding: 80px;
+            max-width: 900px;
+            margin: 0 auto;
+            backdrop-filter: blur(30px);
+        }
+        .private-door {
+            max-width: 700px;
+            margin: 60px auto 0;
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.6;
             line-height: 1.7;
-            opacity: 0.9;
+            font-style: italic;
         }
+
+        /* Gatherings grid */
+        .gatherings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .gathering-card {
+            background: rgba(255,193,7,0.06);
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+        }
+        .gathering-card h4 { color: var(--gold); font-size: 2rem; font-weight: 900; margin-bottom: 15px; }
+        .gathering-card p { font-size: 1.3rem; opacity: 0.9; line-height: 1.7; }
 
         @media (max-width: 1200px) {
             .persona-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 1000px) {
-            .guide-display-inner { flex-direction: column; }
-            .guide-img { max-width: 100%; }
-            .guide-tabs { flex-direction: column; }
-            .tab-btn { min-width: 100%; }
             .container { padding: 0 30px; }
             .persona-grid { grid-template-columns: 1fr; }
+            .gatherings-grid { grid-template-columns: 1fr; }
+            .vow-block { padding: 50px 35px; }
+            .order-box { padding: 50px 30px; }
+        }
+
+        @media (max-width: 600px) {
+            .cta-btn { padding: 20px 40px; font-size: 1.4rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- NAV -->
     <header class="header" id="main-header">
         <div class="container">
             <div class="header-inner">
-                <div class="logo"><a href="#"><img src="logo.png" alt="CLEAR"></a></div>
-                <a href="https://unleashthyself.com/hws-offer-main-242748" class="header-cta">RESERVE YOUR SPACE</a>
+                <div class="logo"><a href="https://unleashthyself.com/hws-offer-main-242748"><img src="logo.png" alt="Clear the Way for What's Next"></a></div>
+                <a href="https://unleashthyself.com/hws-offer-main-242748" class="header-cta">Reserve Your Space</a>
             </div>
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content container" data-aos="fade-up">
             <h1>The signal of who you are is already within you.</h1>
             <p class="hero-sub">You did not arrive here by chance. Something in you recognized something, before your mind could explain why. That recognition is the signal. It has been speaking for a long time.</p>
-            
             <div class="hero-details">
                 <p>You have built. You have led. You have evolved beyond what most ever dare. And now you are ready for what comes next.</p>
                 <p>Not more doing, but a deeper remembering. The steady center beneath everything you have created.</p>
                 <p>And CLEAR is how you return to it.</p>
                 <p>Not to add more. Not to fix anything. To release what was never you, never yours, so what is truly you can finally move without resistance.</p>
-                            </div>
-            <a href="https://unleashthyself.com/hws-offer-main-242748" class="cta-btn">RESERVE YOUR SPACE</a>
+            </div>
+            <a href="https://unleashthyself.com/hws-offer-main-242748" class="cta-btn">Reserve Your Space</a>
             <p style="margin-top: 30px; font-size: 1.4rem; opacity: 0.9;">The signal has never gone quiet. You are simply ready, now, to listen.</p>
         </div>
     </section>
 
+    <!-- THRESHOLD -->
     <section class="section">
-                <div class="container" data-aos="fade-up">
-                    <h2 style="color: var(--gold); text-align: center; font-size: 4rem; margin: 40px 0 30px; font-weight: 900;">This is the threshold.</h2>
-                    <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">You have done the work. You have read the books, sat with the teachers, walked the rooms. Coaches, mentors, therapists, healers, each one met you exactly where you were ready to be met. Each one was real.</p>
-                    <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">And every step brought you here.</p>
-                    <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">To the threshold beneath the threshold. To the layer that lives beyond the mind, beyond strategy. The layer where your original signal lives, beneath everything you have created and become.</p>
-                    <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">You can feel it. The pull is no longer outward. It is inward, toward what is already yours.</p>
-                    <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 40px; line-height: 1.8; opacity: 0.95;">This is the moment your nervous system has been preparing for. The threshold is open. So are you.</p>
-                </div>
-            </section>
+        <div class="container" data-aos="fade-up">
+            <h2 style="color: var(--gold); text-align: center; font-size: 4rem; margin: 40px 0 30px; font-weight: 900;">This is the threshold.</h2>
+            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">You have done the work. You have read the books, sat with the teachers, walked the rooms. Coaches, mentors, therapists, healers, each one met you exactly where you were ready to be met. Each one was real.</p>
+            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">And every step brought you here.</p>
+            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">To the threshold beneath the threshold. To the layer that lives beyond the mind, beyond strategy. The layer where your original signal lives, beneath everything you have created and become.</p>
+            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">You can feel it. The pull is no longer outward. It is inward, toward what is already yours.</p>
+            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 40px; line-height: 1.8; opacity: 0.95;">This is the moment your nervous system has been preparing for. The threshold is open. So are you.</p>
+        </div>
+    </section>
 
-            <section class="section" id="faq">
+    <!-- AUDIO -->
+    <section class="section" style="padding-top: 0;">
         <div class="container">
             <div class="audio-player" data-aos="fade-up">
                 <p style="color: var(--gold); font-weight: 900; margin-bottom: 15px; letter-spacing: 4px; font-size: 1.1rem;">ACTIVATE THE STATE FIRST</p>
                 <p style="margin-bottom: 30px; font-size: 1.2rem; opacity: 0.9;">Press play to anchor your frequency before we begin the transmission.</p>
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/22tvcbKHjD38qAphcapfIC?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/22tvcbKHjD38qAphcapfIC?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
 
-<h2 style="color: var(--gold); text-align: center; font-size: 4rem; margin: 40px 0 30px; font-weight: 900;">I see you.</h2>
+            <!-- I SEE YOU -->
+            <h2 style="color: var(--gold); text-align: center; font-size: 4rem; margin: 40px 0 30px; font-weight: 900;">I see you.</h2>
             <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">I see what brought you here. I see you, beneath all of it.</p>
-            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">And know this. Despite what they may have told you, us, them... you were never broken. You have only been carrying what was never yours. And, it served a purpose. Until it didn\'t. Now that story is ready to be released so you can cross into what is next, carrying only what is yours. And what is truly you can finally lead, love, and live without resistance.</p>
+            <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 20px; line-height: 1.8; opacity: 0.95;">And know this. Despite what they may have told you, us, them... you were never broken. You have only been carrying what was never yours. And it served a purpose. Until it didn't. Now that story is ready to be released so you can cross into what is next, carrying only what is yours. And what is truly you can finally lead, love, and live without resistance.</p>
             <p style="font-size: 1.8rem; text-align: center; max-width: 1100px; margin: 0 auto 40px; line-height: 1.8; opacity: 0.95;">Whether you are a builder of empires, a keeper of the hearth, or a seeker of the deep truth: every dimension of who you are belongs at the steady center. We stand at the threshold together. CLEAR is how each one returns.</p>
 
             <div class="persona-grid">
@@ -387,6 +482,7 @@ h1 {
         </div>
     </section>
 
+    <!-- ORIGIN STORY -->
     <section class="story-section">
         <div class="container story-content" data-aos="fade-up">
             <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 50px; font-weight: 900;">41 Years. One Story. 30 Minutes. Cleared.</h2>
@@ -394,29 +490,29 @@ h1 {
             <p style="margin-top: 30px;">That was the moment a story was born. A story of fear. A story of "cold water is dangerous." A story that became "that's just who I am." And a part of me that took on the role of protector.</p>
             <p style="margin-top: 30px;">I carried that for 41 years. And it served a purpose.</p>
             <p style="margin-top: 30px;">It kept me safe. Until its work was done.</p>
-            <p style="margin-top: 30px;">Then came February 2024. I was at Sensea Nordic Spa in Nova Scotia, sitting in a hot tub at minus 25°C, minus 13°F, staring at a cold plunge waiting at five. For six months I had been pushing through 30 miserable seconds at a time, fighting fire with fire. That day, something was different.</p>
+            <p style="margin-top: 30px;">Then came February 2024. I was at Sensea Nordic Spa in Nova Scotia, sitting in a hot tub at minus 25 degrees Celsius, staring at a cold plunge. For six months I had been pushing through 30 miserable seconds at a time, fighting fire with fire. That day, something was different.</p>
             <p style="margin-top: 30px;">In 30 minutes, the story released.</p>
             <p style="margin-top: 30px;">I didn't fix it. I cleared the noise. I walked into the water and giggled like the one-year-old boy should have.</p>
             <p style="margin-top: 30px;">When I told my mother weeks later what I had witnessed in that release, she confirmed every detail. The age. The scenery. The dock. The water. Forty-one years of memory, gifted to me before I was old enough to hold it.</p>
             <p style="margin-top: 30px;">So I asked: if this is possible, what else is possible?</p>
             <p style="margin-top: 30px;">That question began the journey of CLEAR. For myself. For hundreds of others. People watching their businesses move differently, their relationships soften, doors opening that were not opening before. Not because they pushed harder. Because they stopped carrying what was never theirs.</p>
-            <p style="margin-top: 30px;">A gentle invitation. Slow your breath with me. Place your right hand over your heart, and ask: What are you saying "that's just who I am" about, right now? What if it wasn't true? What if it could change, right now, this very moment? What would be possible from that place?</p>
+            <p style="margin-top: 50px; padding: 40px; background: var(--glass); border-left: 4px solid var(--gold); border-radius: 0 20px 20px 0; font-style: italic;">A gentle invitation. Slow your breath with me. Place your right hand over your heart, and ask: What are you saying "that's just who I am" about, right now? What if it wasn't true? What if it could change, right now, this very moment? What would be possible from that place?</p>
         </div>
     </section>
 
+    <!-- CLEAR METHOD -->
     <section class="section">
         <div class="container">
             <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 60px; font-weight: 900;">The CLEAR Method: A Somatic Path to Truth</h2>
-            
             <div class="method-steps-container"></div>
         </div>
     </section>
 
+    <!-- MONDAY MORNING -->
     <section class="section section-alt">
         <div class="container">
             <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 20px; font-weight: 900;">Monday Morning: The Integrated Life</h2>
             <p style="text-align: center; font-size: 1.6rem; opacity: 0.8; max-width: 1000px; margin: 0 auto 60px;">Transformation is only as good as its integration. Here is what changes in your daily reality when the noise clears:</p>
-            
             <div class="persona-grid">
                 <div class="persona-card" data-aos="fade-up" data-aos-delay="100"><h3>The Leader</h3><p style="font-size: 1.2rem;">You lead from your light, not from your leverage. The decision is already in your body before the meeting ends. Your team feels you in the room before you speak.</p></div>
                 <div class="persona-card" data-aos="fade-up" data-aos-delay="200"><h3>The Founder</h3><p style="font-size: 1.2rem;">You build from alignment, not from urgency. You launch what you have been holding for two years. Not because the strategy got better. Because the static cleared.</p></div>
@@ -430,172 +526,249 @@ h1 {
         </div>
     </section>
 
+    <!-- SCIENCE AND SOUL -->
     <section class="section">
         <div class="container">
-            <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 20px; font-weight: 900;">The Science & Soul of the Shift</h2>
+            <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 20px; font-weight: 900;">The Science and Soul of the Shift</h2>
             <p style="text-align: center; font-size: 1.6rem; opacity: 0.8; max-width: 1000px; margin: 0 auto 60px;">Why CLEAR works across lifetimes, anchoring your original signal through somatic precision and quantum coherence.</p>
-            
-                <div class="foundation-grid" id="science-soul-container"></div>
-            </div>
+            <div class="foundation-grid" id="science-soul-container"></div>
         </div>
     </section>
 
+    <!-- THE GUIDE -->
     <section class="section section-alt">
         <div class="container">
-            <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 60px; font-weight: 900;">The Guide: A Multidimensional Journey</h2>
+            <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 10px; font-weight: 900;">Meet Constantin</h2>
+            <p style="text-align: center; font-size: 1.6rem; opacity: 0.7; margin-bottom: 60px;">A Multidimensional Journey</p>
             <div class="guide-steps-container"></div>
         </div>
     </section>
 
+    <!-- THE INVITATION / OFFER -->
     <section id="offer" class="offer-section">
         <div class="container offer-content">
-            <h2 style="color: var(--gold); font-size: 4.5rem; font-weight: 900; margin-bottom: 40px;">The Invitation</h2>
-            <div style="background: var(--glass); border: 2px solid var(--gold); border-radius: 50px; padding: 80px; text-align: left; backdrop-filter: blur(30px); max-width: 1100px; margin: 0 auto;">
-                <h3 style="color: var(--gold); font-size: 2.8rem; margin-bottom: 50px; text-align: center; font-weight: 900;">The Experience Includes:</h3>
-                <div style="display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px solid var(--glass-border); font-size: 1.5rem;"><span>3 Full Live CLEAR Activation Sessions</span><span style="color: var(--gold); font-weight: 700;">$997 Value</span></div>
-                <div style="display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px solid var(--glass-border); font-size: 1.5rem;"><span>1 Deep Integration & Q&A Session</span><span style="color: var(--gold); font-weight: 700;">$497 Value</span></div>
-                <div style="display: flex; justify-content: space-between; padding: 25px 0; border-bottom: 1px solid var(--glass-border); font-size: 1.5rem;"><span>The CLEAR Frequency Playlist (Anchor Your State)</span><span style="color: var(--gold); font-weight: 700;">$97 Value</span></div>
-                <div style="display: flex; justify-content: space-between; padding: 40px 0; font-weight: 900; font-size: 2.5rem; color: var(--off-white); border-top: 4px solid var(--gold); margin-top: 40px;">
-                    <span>Total Real-World Value</span><span>$1,591</span>
+            <h2 style="color: var(--gold); font-size: 4.5rem; font-weight: 900; margin-bottom: 40px;" data-aos="fade-up">The Invitation</h2>
+            <div style="background: var(--glass); border: 2px solid var(--gold); border-radius: 50px; padding: 80px; text-align: left; backdrop-filter: blur(30px); max-width: 1100px; margin: 0 auto;" data-aos="fade-up">
+                <p style="font-size: 1.6rem; line-height: 1.9; margin-bottom: 50px; opacity: 0.95; text-align: center;">Two live 90-minute gatherings, held in Constantin's presence. His channeled CLEAR music woven through each one. Space for live questions and teaching inside each gathering. And if life gets in the way, the recording is yours.</p>
+
+                <h3 style="color: var(--gold); font-size: 2.4rem; font-weight: 900; margin-bottom: 40px; text-align: center;">The Gatherings</h3>
+
+                <div class="gatherings-grid">
+                    <div class="gathering-card">
+                        <h4>The Crossing</h4>
+                        <p>Saturday, June 27, 2026<br>Noon ET / 1 PM AST<br>90 minutes</p>
+                    </div>
+                    <div class="gathering-card">
+                        <h4>The Landing</h4>
+                        <p>Saturday, July 11, 2026<br>Noon ET / 1 PM AST<br>90 minutes</p>
+                    </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; font-size: 4.5rem; font-weight: 900; color: var(--gold); margin-top: 30px;">
-                    <span>Your Investment Today</span><span>$27</span>
+
+                <div style="background: var(--glass); border-radius: 20px; padding: 30px 40px; margin-bottom: 40px;">
+                    <p style="font-size: 1.3rem; line-height: 1.8; opacity: 0.9;"><strong style="color: var(--gold);">The Music.</strong> Constantin's CLEAR frequency playlist is available to you right now, freely, on Spotify and Apple Music. It is not a bonus. It is a gift you already have access to. Use it today to begin anchoring your state. <a href="https://open.spotify.com/playlist/22tvcbKHjD38qAphcapfIC" target="_blank" style="color: var(--gold);">Listen on Spotify</a></p>
                 </div>
-                
-                <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid rgba(197, 168, 124, 0.3); text-align: center;">
-                    <h4 style="color: var(--gold); font-size: 2rem; margin-bottom: 20px;">Session Dates</h4>
-                    <p style="font-size: 1.4rem; margin-bottom: 10px;">June 16 – 7 PM EST</p>
-                    <p style="font-size: 1.4rem; margin-bottom: 10px;">June 18 – 7 PM EST</p>
-                    <p style="font-size: 1.4rem; margin-bottom: 10px;">June 20 – 11 AM EST</p>
-                    <p style="font-size: 1.4rem; color: var(--gold); margin-top: 20px;">Bonus: June 27 – 11 AM EST</p>
+
+                <div style="text-align: center; border-top: 2px solid var(--gold); padding-top: 40px;">
+                    <p style="font-size: 1.4rem; opacity: 0.8; margin-bottom: 10px;">Your investment</p>
+                    <p style="font-size: 5rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 10px;">$111</p>
+                    <p style="font-size: 1.2rem; opacity: 0.7; font-style: italic;">Can't attend live? You receive the recording.</p>
                 </div>
             </div>
-            <a href="https://unleashthyself.com/hws-offer-main-242748" class="cta-btn" style="margin-top: 80px;">SECURE YOUR SPOT FOR $27</a>
-            
-            <div style="margin-top: 80px; display: flex; flex-direction: column; align-items: center; gap: 30px; background: rgba(197, 168, 124, 0.05); padding: 40px; border-radius: 20px; border: 1px solid var(--glass-border);">
-                <img src="sacredresonance.png" alt="Sacred Resonance Seal" style="width: 250px; height: 250px; filter: drop-shadow(0 0 30px rgba(197, 168, 124, 0.4));">
-                <p style="max-width: 700px; text-align: center; font-size: 1.3rem; line-height: 1.6; opacity: 0.9;">Attend at least 2 of the 3 live sessions. If you do not feel the shift in your frequency, we return your investment. We hold the space. You bring the presence.</p>
+            <a href="https://unleashthyself.com/hws-offer-main-242748" class="cta-btn" style="margin-top: 80px;">Reserve Your Space</a>
+        </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="proof-section">
+        <div class="container proof-content">
+            <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 20px; font-weight: 900;" data-aos="fade-up">What happens in the field</h2>
+
+            <div style="max-width: 900px; margin: 0 auto 60px; text-align: center;" data-aos="fade-up">
+                <p style="font-size: 1.6rem; line-height: 1.9; opacity: 0.95; background: var(--glass); border: 1px solid var(--gold); border-radius: 25px; padding: 50px;">On June 12, more than fifty people gathered live. They arrived carrying 7s, 8s, and 9s on a 1-to-10 noise scale of anxiety, mental noise, and business stress. Forty minutes later, the chat filled with 1s and 0s. Stories were released. Calm arrived. A quiet settled in the room that people said they had not felt in years. Forty people stayed twenty minutes past the close, not wanting to leave the field.</p>
             </div>
+
+            <p style="text-align: center; font-size: 1.3rem; opacity: 0.7; margin-bottom: 40px; letter-spacing: 2px; font-weight: 700;">FROM THE ROOM, IN THEIR OWN WORDS</p>
+
+            <div class="quote-grid">
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="100">
+                    <p>"Zero. Simply present."</p>
+                    <span class="attribution">R.</span>
+                </div>
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="150">
+                    <p>"Very beautiful and powerful."</p>
+                    <span class="attribution">N., UK</span>
+                </div>
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="200">
+                    <p>"A feeling of refreshment."</p>
+                    <span class="attribution">J.</span>
+                </div>
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="250">
+                    <p>"This was very peaceful."</p>
+                    <span class="attribution">D.</span>
+                </div>
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="300">
+                    <p>"A journey based on feelings and sensations, with no need for mental interaction."</p>
+                    <span class="attribution">O.</span>
+                </div>
+                <div class="quote-card" data-aos="fade-up" data-aos-delay="350">
+                    <p>"The releasing kept going even as he spoke. It felt healing."</p>
+                    <span class="attribution">M.</span>
+                </div>
             </div>
+
+            <div style="max-width: 900px; margin: 60px auto 0;">
+                <div class="use-case-block" data-aos="fade-up">
+                    "Someone I work closely with came to a session with an intention to allow what needs to move, move, be released, dissolve. He left having made, on his own, a major life decision he had been frozen on for weeks that he didn't even know was being blocked by a series of stories. And we didn't even have to name it. CLEAR Activation took care of everything as he moved through each stage. So when the story underneath releases, what's sitting on top of it moves too. And miracles unfold."
+                </div>
+                <div class="use-case-block" data-aos="fade-up" style="margin-top: 20px;">
+                    "In a recent private session, a participant moved from a 7 to a 2 in about sixteen minutes, then released a held pattern without ever needing to know its story, ending 40 minutes later at a baseline 1 with the calm, peace, and connection lasting much longer."
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 80px;" data-aos="fade-up">
+                <a href="https://unleashthyself.com/hws-offer-main-242748" class="cta-btn">Reserve Your Space</a>
             </div>
         </div>
     </section>
 
+    <!-- NO-SELLING VOW -->
+    <section class="vow-section">
+        <div class="container">
+            <div class="vow-block" data-aos="fade-up">
+                <h2>A promise.</h2>
+                <p>There is no selling inside any gathering I hold. Not at the start, not at the end, not tucked into the middle.</p>
+                <p>We come together to cross a threshold, and that is all we do. If at some point you feel called to go deeper with me, you'll know it on your own, from the inside, not because I asked, or we forced anything.</p>
+                <p>And if that call comes, what follows is an invitation, never a pitch. A door held open, not a hand pushing you from the back.</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 60px auto 0; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 30px; padding: 60px; text-align: center;" data-aos="fade-up">
+                <h3 style="color: var(--gold); font-size: 2.5rem; font-weight: 900; margin-bottom: 25px;">My commitment.</h3>
+                <p style="font-size: 1.5rem; line-height: 2.2; opacity: 0.95;">I bring my full presence, my frequency, and the music.<br>You bring your willingness to be met.<br>That is the whole exchange.<br>Nothing to prove, nothing to grade.<br>You show up, and the work does what it does.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="section">
         <div class="container">
             <h2 style="color: var(--gold); text-align: center; font-size: 3.5rem; margin-bottom: 60px; font-weight: 900;">Clearing the Myths</h2>
             <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"Is this just another mindset hack?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"Is this just another mindset hack?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">No. Mindset work often adds layers of 'positive' noise over existing static. CLEAR is a subtraction method. We use memory reconsolidation to dissolve the somatic roots of the patterns themselves, so the shift happens in your biology, not just your thoughts.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">No. Mindset work often adds layers of positive noise over existing static. CLEAR is a subtraction method. We use memory reconsolidation to dissolve the somatic roots of the patterns themselves, so the shift happens in your biology, not just your thoughts.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"How can a 30-minute shift resolve 41 years of noise?"
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"How can a 30-minute shift resolve 41 years of noise?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Time is not the measure of truth. When the nervous system feels safe enough to access the 'original signal,' the update happens immediately. Just as a single drop of clean water can begin to clear a glass of ink, one moment of true resonance can re-pattern decades of adaptation.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">Time is not the measure of truth. When the nervous system feels safe enough to access the original signal, the update happens immediately. Just as a single drop of clean water can begin to clear a glass of ink, one moment of true resonance can re-pattern decades of adaptation.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"I've tried therapy and coaching. Why is this different?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"I've tried therapy and coaching. Why is this different?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Therapy often focuses on the 'story' (the mind). Coaching often focuses on the 'action' (the will). CLEAR focuses on the 'signal' (the nervous system and field). By clearing the somatic and energetic static, the actions you take afterward finally have the foundation to land.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">Therapy often focuses on the story (the mind). Coaching often focuses on the action (the will). CLEAR focuses on the signal (the nervous system and field). By clearing the somatic and energetic static, the actions you take afterward finally have the foundation to land.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"I'm already doing deep spiritual work. How is this different from what I already do?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"I'm already doing deep spiritual work. How is this different?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">You may have done plant medicine, retreats, energy work. Each has its place. Each met you at the layer you were ready to meet. CLEAR works differently because it does not require story, belief, or interpretation. The body already knows what is ready to be released. CLEAR creates the conditions, holds the frequency, and lets your own system do the work. Many who have done deep work for years experience their first full release here. Not because they had not gone deep. Because they had not yet been met at this layer.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">You may have done plant medicine, retreats, energy work. Each has its place. Each met you at the layer you were ready to meet. CLEAR works differently because it does not require story, belief, or interpretation. The body already knows what is ready to be released. CLEAR creates the conditions, holds the frequency, and lets your own system do the work. Many who have done deep work for years experience their first full release here. Not because they had not gone deep. Because they had not yet been met at this layer.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"Does 'healing' mean I am broken?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"Does 'healing' mean I am broken?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Never. In the CLEAR framework, we don't even use the word 'broken.' You are a masterpiece of alignment that has simply accumulated layers of protection and noise that were never yours to carry. We aren't fixing you: we are revealing you.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">Never. In the CLEAR framework, we don't even use the word broken. You are a masterpiece of alignment that has simply accumulated layers of protection and noise that were never yours to carry. We aren't fixing you: we are revealing you.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"Do I need to be spiritual for this to work?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"Do I need to be spiritual for this to work?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">You only need to be human. The biology of memory reconsolidation and the physics of frequency don't require belief. They require presence. Whether you call it soul or signal, the result is the same: a return to your own steady center.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">You only need to be human. The biology of memory reconsolidation and the physics of frequency don't require belief. They require presence. Whether you call it soul or signal, the result is the same: a return to your own steady center.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"What if nothing comes up for me?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"What if nothing comes up for me?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Something always comes up. There has not been a CLEAR session where the body stayed silent. When the nervous system feels truly safe, the static reveals itself. You will not need to push, search, or perform. You only need to be willing to be met. The signal is already there. The container is what makes the difference.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">Something always comes up. There has not been a CLEAR session where the body stayed silent. When the nervous system feels truly safe, the static reveals itself. You will not need to push, search, or perform. You only need to be willing to be met. The signal is already there. The container is what makes the difference.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"Why is the investment $27?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"Does the group setting dilute the personal experience?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Because the work is not gated by price. $27 is a threshold of commitment, not a price tag on transformation. The work itself is offered as a gift to anyone ready to meet it. Your investment honors the container. The result honors you.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">Actually, it accelerates it. In quantum biology, the Field Effect means that when a group of people aligns their frequency, the collective coherence makes it easier for each individual to clear their own static. You aren't just doing your work: you are being carried by the momentum of the collective signal.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"How can 4 hours equal years of traditional work?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
+
+                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255,255,255,0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
+                    <button onclick="toggleFaq(this)" style="width:100%;padding:25px;background:none;border:none;color:var(--gold);font-size:1.6rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700;">
+                        <span>"Is the music just for the sessions?"</span><span class="faq-icon" style="transition:transform 0.3s;">&#8595;</span>
                     </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Traditional work often navigates the 'conscious' mind, which is only 5% of your processing power. CLEAR engages the 95%: the subconscious and the nervous system. By using memory reconsolidation, we update the core code rather than just managing the symptoms. It is the difference between deleting a file and trying to hide it in a folder.</p>
+                    <div class="faq-content" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease-out;padding:0 25px;">
+                        <p style="font-size:1.2rem;opacity:0.9;padding-bottom:25px;">No. The music is a proprietary frequency channeled by Constantin to act as a sonic anchor. While it guides the live work, it is a standalone tool for meditation, integration, and journeying. You can find Constantin's music on Spotify and Apple Music, helping your nervous system maintain its new baseline in your daily life.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"Does the group setting dilute the personal experience?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
-                    </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">Actually, it accelerates it. In quantum biology, the 'Field Effect' means that when a group of people aligns their frequency, the collective coherence makes it easier for each individual to clear their own static. You aren't just doing your work: you are being carried by the momentum of the collective signal.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"What is the Sacred Resonance Commitment?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
-                    </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">It is our promise to you. Attend at least 2 of the 3 live sessions. Engage with the process. If you don't feel a measurable shift in your internal clarity or your external momentum, we will return your investment. We aren't here to sell a product: we are here to anchor a result.</p>
-                    </div>
-                </div>
-                <div class="faq-item" style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid var(--glass-border); overflow: hidden;">
-                    <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; background: none; border: none; color: var(--gold); font-size: 1.6rem; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                        <span>"Is the music just for the sessions?"</span>
-                        <span class="faq-icon" style="transition: transform 0.3s;">↓</span>
-                    </button>
-                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 25px;">
-                        <p style="font-size: 1.2rem; opacity: 0.9; padding-bottom: 25px;">No. The music is a proprietary frequency channeled by Constantin to act as a sonic anchor. While it guides the live work, it is a standalone tool for meditation, integration, and journeying. You can find the majority of Constantin's music on your favorite platforms like Spotify and Apple Music, helping your nervous system maintain its new baseline in your daily life.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- FINAL CTA -->
+    <section id="order-form" class="order-section">
+        <div class="container order-content">
+            <h2 style="color: var(--gold); font-size: 4rem; font-weight: 900; margin-bottom: 20px;" data-aos="fade-up">Your space is waiting.</h2>
+            <p style="font-size: 1.6rem; opacity: 0.85; margin-bottom: 60px;" data-aos="fade-up">Two gatherings. One honest number. $111.</p>
+            <div class="order-box" data-aos="fade-up">
+                <p style="font-size: 1.8rem; line-height: 1.9; margin-bottom: 40px; opacity: 0.95;">Two gatherings. One honest number. Your space is waiting.</p>
+                <div class="gatherings-grid" style="margin-bottom: 40px;">
+                    <div class="gathering-card"><h4>The Crossing</h4><p>Saturday, June 27, 2026<br>Noon ET / 1 PM AST<br>90 minutes</p></div>
+                    <div class="gathering-card"><h4>The Landing</h4><p>Saturday, July 11, 2026<br>Noon ET / 1 PM AST<br>90 minutes</p></div>
+                </div>
+                <p style="font-size: 4rem; font-weight: 900; color: var(--gold); margin-bottom: 10px;">$111</p>
+                <p style="font-size: 1.2rem; opacity: 0.7; font-style: italic; margin-bottom: 50px;">Can't attend live? You receive the recording.</p>
+                <a href="https://unleashthyself.com/hws-offer-main-242748" class="cta-btn" style="font-size: 1.6rem; padding: 25px 70px;">Reserve Your Space &rarr;</a>
+            </div>
+            <div class="private-door" data-aos="fade-up">
+                If you feel called to cross privately, just you and me in the field, I hold a small number of one-to-one crossings for summit friends. Reply to your confirmation email and I'll share what that looks like.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: var(--deep-field); padding: 60px 0; text-align: center; border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <p style="opacity: 0.5; font-size: 1rem; line-height: 1.8;">2026 All Good Transformational Coaching and Consulting Inc. All Rights Reserved.<br>
+            <a href="#" style="color: var(--off-white); opacity: 0.5; text-decoration: none;">Terms and Conditions</a> &nbsp;|&nbsp;
+            <a href="#" style="color: var(--off-white); opacity: 0.5; text-decoration: none;">Privacy Policy</a><br>
+            info@unleashthyself.com &nbsp;|&nbsp; Bedford, Nova Scotia, Canada</p>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -648,9 +821,9 @@ h1 {
         const guideData = [
             { title: "The Threshold", text: "The Threshold is the sacred space between the old story and what is becoming. Constantin holds this space with steady presence, witnessing the moment you finally release what was never yours.", img: "Constantin Nature 2.jpg" },
             { title: "The Bridge", text: "Constantin is an AI professional by day, a frequency conductor by night. He carries both the precision of the technical mind and the depth of the soul. He speaks both languages so you do not have to choose between them.", img: "Constantin Bo Morun - Headshot.jpg" },
-            { title: "The Father", text: "Constantin is a new father to Ilian. He works to clear what was passed to him before it passes forward. The greatest gift we offer our children is our own cleared presence. They inherit our light, not what was never ours to carry.", img: "Constantin & Ilian.jpg" },
-            { title: "The Steward", text: "Constantin lives close to the land in New Brunswick, Canada, in deep connection with the earth, with his border collie Oreo and his shepherd Raven. He returns to the original rhythms. He believes presence in the natural field is one of the fastest ways back to your own.", img: "Oreo & Raven.jpg" },
-            { title: "The Seeker", text: "Constantin is a lifelong seeker. He has invested over $100,000 in his own remembering. He has walked the path of clearing his own stories. He guides from a place that has been lived, not theorized.", img: "Constantin Nature.jpg" }
+            { title: "The Father", text: "Constantin is a new father to Ilian. He works to clear what was passed to him before it passes forward. The greatest gift we offer our children and the world is our own cleared presence. They inherit our light, not what was never ours to carry.", img: "Constantin & Ilian.jpg" },
+            { title: "The Steward", text: "Constantin lives close to the land in New Brunswick, Canada, in deep connection with the earth, with his border collie Oreo and his shepherd Raven. He returns to the original rhythms. He believes presence in the natural field is one of the fastest ways back to your own. It is why he hosts and guides retreats in nature, where the land itself becomes part of the clearing.", img: "Oreo & Raven.jpg" },
+            { title: "The Seeker", text: "Constantin is a lifelong seeker. He has invested over $100,000 in his own remembering, and the investment has not stopped. The journey continues. He is not someone who arrived and now teaches from a fixed point. He walks the path still, clearing his own stories as they arise, going deeper as the layers reveal themselves. He guides from a place that has been lived, not theorized, and is still being lived.", img: "Constantin Nature.jpg" }
         ];
 
         const guideStepsContainer = document.querySelector(".guide-steps-container");
